@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between left (logo) and center (nav links) */
+    align-items: center;
+    padding: 1rem;
+    background-color: #16423C;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    color:#151515;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 20px; /* Align logo to the left */
+    flex: 0 0 auto; /* Make sure logo stays on the left */
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex: 1; /* Make nav links take up the center of the navbar */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links li a {
+    color:#151515;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color :#C4DAD2;
+}
+/* Navbar Scroll Effect */
+.navbar.scrolled {
+    background-color: #6A9C89;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.types{
+    background-color: #6A9C89;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    padding: 100px 8%;
+}
+
+.types h1{
+    font-size: 35px;
+    color: #16423C;  
+}
+
+.items {
+    display: flex;
+    gap: 60px;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    
+}
+.item h3{
+    font-size: 20px;
+    color: #16423C;
+}
+
+.type-icon{
+    width : 130px;
+    height: 130px;
+    background-color: white;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9d149d;
+    font-size: 40px;
+}
+
+.types img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 1rem;
+    background-color: #C4DAD2;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #16423C;
+}
+
+/* Testimonial Boxes Container */
+.testimonial-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Individual Testimonial Box */
+.testimonial {
+    background-color: #6A9C89;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(91, 67, 67, 0.1);
+    border: 1px solid #ddd;
+    padding: 2rem;
+    width: 300px; 
+    box-sizing: border-box;
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial h4 {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 80%;
+        margin-bottom: 1.5rem;
+    }
+}
+.trusted-section {
+    text-align: center;
+    background-color: #6A9C89;
+    padding: 40px 0;
+}
+.trusted-section h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.logos img {
+    border-radius: 10%;
+    width: 150px;
+    height: auto;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Unique Wave Effect */
+.footer {
+    position: relative;
+    background: #0c7583;
+    color: rgba(196,209,202,255);
+    padding: 40px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: url('https://i.imgur.com/6LKQhKk.png');
+    background-size: cover;
+    animation: wave-animation 4s infinite ease-in-out;
+}
+
+#wave1 {
+    z-index: 100;
+    opacity: 1;
+    bottom: 0;
+    animation-delay: 0s;
+}
+
+#wave2 {
+    z-index: 99;
+    opacity: 0.5;
+    bottom: 10px;
+    animation-delay: -1s;
+}
+
+#wave3 {
+    z-index: 98;
+    opacity: 0.3;
+    bottom: 20px;
+    animation-delay: -2s;
+}
+
+#wave4 {
+    z-index: 97;
+    opacity: 0.1;
+    bottom: 30px;
+    animation-delay: -3s;
+}
+
+@keyframes wave-animation {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+/* Unique Wave Effect */
+.footer {
+    position: relative;
+    background:#C4DAD2;
+    color:#3f4216;
+    padding: 40px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: url('https://i.imgur.com/6LKQhKk.png');
+    background-size: cover;
+    animation: wave-animation 4s infinite ease-in-out;
+}
+
+#wave1 {
+    z-index: 100;
+    opacity: 1;
+    bottom: 0;
+    animation-delay: 0s;
+}
+
+#wave2 {
+    z-index: 99;
+    opacity: 0.5;
+    bottom: 10px;
+    animation-delay: -1s;
+}
+
+#wave3 {
+    z-index: 98;
+    opacity: 0.3;
+    bottom: 20px;
+    animation-delay: -2s;
+}
+
+#wave4 {
+    z-index: 97;
+    opacity: 0.1;
+    bottom: 30px;
+    animation-delay: -3s;
+}
+
+@keyframes wave-animation {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+/* Footer Content */
+.footer-content {
+    position: relative;
+    z-index: 101;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color:#3f0a14;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color:#421616;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #184656;
+}
+
+.footer-bottom {
+    background-color: #6A9C89;
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 101;
+    position: relative;
+}
